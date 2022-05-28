@@ -77,12 +77,16 @@ form:: ( DomBuilder t m
            , Prerender js t m
            ) => m ()
 form = do
-    el "h1" (text "Minha lista de compras")
-    elAttr "p" ("class" =: "title") (text "Quantidade:") 
+  elAttr "main" ("class" =: "container") $ do
+    elAttr "div" ("class" =: "spacing") $ do
+    elAttr "h1" ("class" =: "title") $ text "Minha Lista"
+    elAttr "div" ("class" =: "spacing") $ do
+    
+    elAttr "label" ("class" =: "title") (text "Quantidade:") 
     quantidade <- numberInput
-    elAttr "p" ("class" =: "title") (text "Produto:") 
+    elAttr "label" ("class" =: "title") (text "Produto:") 
     produto <- inputElement def
-    elAttr "p" ("class" =: "title") (text "Valor:") 
+    elAttr "label" ("class" =: "title") (text "Valor:") 
     valor <- numberInput
     el' "button" (text "Listar")
     el "br" (blank)
