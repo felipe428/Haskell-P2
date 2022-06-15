@@ -127,3 +127,33 @@ button {
 .spacing {
   margin: 14px;
 }
+
+table {
+  border: 1px solid #2d9227;
+}
+ 
+thead {
+  background-color: #2d9227;
+  color: #fff;
+}
+ 
+thead th.tabela_id {
+  width: 40px;
+}
+ 
+thead th.tabela_nome {
+  width: 120px;
+}
+ 
+thead th.tabela_valor {
+  width: 80px;
+}
+ 
+thead th.tabela_quantidade {
+  width: 80px;
+}
+ 
+tbody td {
+  text-align: center;
+  padding: 4px;
+}
